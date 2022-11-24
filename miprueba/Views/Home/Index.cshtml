@@ -1,0 +1,33 @@
+﻿@model miprueba.Models.Cliente
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h4 style="color:purple">
+     <b>DPI:</b>    @ViewBag._DPI = cliente.DPI <br />
+         <b>Nombres:</b>    @ViewBag._NOMBRES  = cliente.NOMBRES <br />
+         <b>Apellidos:</b>    @ViewBag._APELLIDOS = cliente.APELLIDOS <br />
+         <b>Teléfono:</b>    @ViewBag._TELEFONO = cliente.TELEFONO <br />
+         <b>Email:</b>    @ViewBag._EMAIL = cliente.EMAIL <br />         
+         <b>Tipo Contador:</b>    @ViewBag._NOMBRE_TIPO_CONTADOR = cliente.NOMBRE_TIPO_CONTADOR <br />
+         <b>Tipo Tarifa:</b>    @ViewBag._TIPO_TARIFA = cliente.TIPO_TARIFA <br />
+         <b>Dirección:</b>    @ViewBag._DIRECCION_DESTINO = cliente.DIRECCION_DESTINO <br />
+         <b>Municipio:</b>    @ViewBag._NOMBRE_MUNICIPIO = cliente.NOMBRE_MUNICIPIO <br />
+         <b>Departamento:</b>    @ViewBag._NOMBRE_DEPARTAMENTO = cliente.NOMBRE_DEPARTAMENTO <br />
+   
+</h4>
+
+ 
+   @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{ 
+    <table>
+        <tr>
+            <td>Enter ID: </td>
+            <td>@Html.TextBoxFor(m => m.ID_CONTADOR)</td>
+        </tr>
+       
+       
+        <tr>
+            <td colspan="2"><input type="submit" value="Submit Form" /></td>
+        </tr>
+    </table>
+}
